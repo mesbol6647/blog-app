@@ -1,31 +1,12 @@
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import AppRouter from "./router/AppRouter";
-import { green, grey, blueGrey } from "@mui/material/colors";
-import { Provider } from "react-redux";
-import store from "./app/store";
-import { ToastContainer } from "react-toastify";
+import React from 'react'
+import NavBars from './components/NavBars'
 
-function App() {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: green["900"],
-      },
-      secondary: {
-        main: blueGrey["900"],
-      },
-    },
-  });
+const App = () => {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Provider store={store}>
-          <AppRouter />
-        </Provider>
-        <ToastContainer />
-      </ThemeProvider>
-    </>
-  );
+    <div>
+      <NavBars/>
+   </div>
+  )
 }
 
-export default App;
+export default App
